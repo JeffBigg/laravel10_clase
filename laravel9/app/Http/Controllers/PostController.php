@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class PostController extends Controller
 {
@@ -16,9 +17,15 @@ class PostController extends Controller
     {
         return view('agregar');
     }
-    public function store ()
+    public function store (Request $request)
     {
-        return "prosces de form";
+        $post=new User;
+        $post->name=$request->input('nombre');
+        $post->fullname=$request->input('apellido');
+        $post->cellphone=$request->input('celular');
+        $post->email=$request->input('email');
+        $post->save();
+        return to_route('contact');
     }
     
 
