@@ -27,6 +27,16 @@ class PostController extends Controller
         $post->save();
         return to_route('contact');
     }
+    public function editar(User $post)
+    {
+        return view('editar',['post'=>$post]);
+    }
+    public function eliminar(User $post)
+    {
+        return $post;
+    }
+    
+    
     
 
 }

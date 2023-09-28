@@ -1,35 +1,34 @@
 <x-layouts.app title="contact" meta-description="contact meta description">
     <h1>contact</h1>
-<table class="table table-striped">
-  <thead>
-    
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">NOMBRE</th>
-      <th scope="col">APELLIDOS</th>
-      <th scope="col">CELULAR</th>
-      <th scope="col">CORREO</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($posts as $post)
-    <tr>
-      <th>{{$post->id}}</th>
-      <td>{{$post->name}}</td>
-      <td>{{$post->fullname}}</td>
-      <td>{{$post->cellphone}}</td>
-      <td>{{$post->email}}</td>
-      <td>
-        <a href="" class="btn btn-primary">Editar</a>
-      </td>
-      <td>
-      <form action="" method="POST">
-      <button type="submit" class="btn btn-danger">Eliminar</button>
-      </form>
-      </td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
+    <table class="table table-striped">
+        <thead>
+
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">APELLIDOS</th>
+                <th scope="col">CELULAR</th>
+                <th scope="col">CORREO</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($posts as $post)
+            <tr>
+                <th>{{$post->id}}</th>
+                <td>{{$post->name}}</td>
+                <td>{{$post->fullname}}</td>
+                <td>{{$post->cellphone}}</td>
+                <td>{{$post->email}}</td>
+                <td>
+                    <a href="{{route('editar', $post->id) }}" class="btn btn-primary">Editar</a>
+                </td>
+                <td>
+                    <a href="" class="btn btn-danger">eliminar</a>
+
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 
 </x-layouts.app>
