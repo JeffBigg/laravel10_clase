@@ -7,6 +7,7 @@
       <th scope="col">#</th>
       <th scope="col">NOMBRE</th>
       <th scope="col">APELLIDOS</th>
+      <th scope="col">CELULAR</th>
       <th scope="col">CORREO</th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <th>{{$post->id}}</th>
       <td>{{$post->name}}</td>
       <td>{{$post->fullname}}</td>
+      <td>{{$post->cellphone}}</td>
       <td>{{$post->email}}</td>
     </tr>
     @endforeach
