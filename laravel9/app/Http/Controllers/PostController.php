@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts=DB::table('posts')->get();
+        $posts=DB::table('users')->get();
         return view('contact',['posts'=>$posts]);
     }
 }
