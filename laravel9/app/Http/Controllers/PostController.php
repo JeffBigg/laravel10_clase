@@ -12,4 +12,14 @@ class PostController extends Controller
         $posts=DB::table('users')->get();
         return view('contact',['posts'=>$posts]);
     }
+    public function agregar()
+    {
+        return view('agregar');
+    }
+    public function store ()
+    {
+        return "prosces de form";
+    }
+    
+
 }

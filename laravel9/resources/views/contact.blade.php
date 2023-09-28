@@ -19,6 +19,14 @@
       <td>{{$post->fullname}}</td>
       <td>{{$post->cellphone}}</td>
       <td>{{$post->email}}</td>
+      <td>
+        <a href="" class="btn btn-primary">Editar</a>
+      </td>
+      <td>
+      <form action="" method="POST">
+      <button type="submit" class="btn btn-danger">Eliminar</button>
+      </form>
+      </td>
     </tr>
     @endforeach
   </tbody>
