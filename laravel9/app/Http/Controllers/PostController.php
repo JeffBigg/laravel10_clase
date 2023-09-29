@@ -27,16 +27,13 @@ class PostController extends Controller
         $post->save();
         return to_route('contact');
     }
-    public function editar(User $post)
+    public function editar($id)
     {
-        return view('editar',['post'=>$post]);
+        $post=user::find($id);
+        return view('editar',compact('users'));
     }
     public function eliminar(User $post)
     {
         return $post;
     }
-    
-    
-    
-
 }

@@ -8,5 +8,5 @@ Route::get('/contact', [PostController::class,'index'])->name('contact');
 Route::get('/agregar', [PostController::class,'agregar'])->name('agregar');
 Route::post('/agregar', [PostController::class,'store'])->name('agregar.store');
 
-Route::post('/editar', [PostController::class,'editar'])->name('editar');
-Route::post('/eliminar', [PostController::class,'eliminar'])->name('eliminar');
+Route::post('/editar{id}', [PostController::class,'editar'])->name('editar');
+Route::post('/actualizar{id}', [PostController::class,'actualizar'])->name('actualizar');
